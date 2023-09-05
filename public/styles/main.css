@@ -1,0 +1,137 @@
+
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    background-color: #ECF0F0;
+}
+
+nav {
+    margin: 4em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1rem;
+    position: relative;
+}
+
+nav ul li a.active:before {
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+
+nav ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(122, 122, 122);
+    bottom: -6px;
+    transition: width .3s;
+}
+
+/* Button */
+.custom-btn-color {
+  background-color: #0ACCDC;
+  color: white;
+  border: none; /* Removes default border */
+}
+
+.custom-btn-color:hover {
+  background-color: #0EAEBB; 
+  color: white;
+  border: none;
+}
+
+
+
+/* Todolist card */
+.list-group {
+    width: 100%;
+    max-width: 460px;
+    margin-inline: 1.5rem;
+  }
+  
+  .form-check-input:checked + .form-checked-content {
+    opacity: .5;
+  }
+  
+  .form-check-input-placeholder {
+    border-style: dashed;
+  }
+  [contenteditable]:focus {
+    outline: 0;
+  }
+  
+  .list-group-checkable .list-group-item {
+    cursor: pointer;
+  }
+  .list-group-item-check {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+  .list-group-item-check:hover + .list-group-item {
+    background-color: var(--bs-secondary-bg);
+  }
+  .list-group-item-check:checked + .list-group-item {
+    color: #fff;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+  }
+  .list-group-item-check[disabled] + .list-group-item,
+  .list-group-item-check:disabled + .list-group-item {
+    pointer-events: none;
+    filter: none;
+    opacity: .5;
+  }
+  
+  .list-group-radio .list-group-item {
+    cursor: pointer;
+    border-radius: .5rem;
+  }
+  .list-group-radio .form-check-input {
+    z-index: 2;
+    margin-top: -.5em;
+  }
+  .list-group-radio .list-group-item:hover,
+  .list-group-radio .list-group-item:focus {
+    background-color: var(--bs-secondary-bg);
+  }
+  
+  .list-group-radio .form-check-input:checked + .list-group-item {
+    background-color: var(--bs-body);
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 2px var(--bs-primary);
+  }
+  .list-group-radio .form-check-input[disabled] + .list-group-item,
+  .list-group-radio .form-check-input:disabled + .list-group-item {
+    pointer-events: none;
+    filter: none;
+    opacity: .5;
+  }
+  
+
+
+
+/* Microinteractions */
+
+nav ul li a:hover:before {
+    width: 35%;
+}
+
